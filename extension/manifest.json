@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Auth Extension",
+    "version": "1.0",
+    "description": "Chrome extension for authentication and token sharing",
+    "permissions": ["identity", "storage"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "externally_connectable": {
+    "matches": ["http://localhost:5173/*"]
+  },
+    "host_permissions": ["http://localhost:5000*","http://localhost:5173*"],
+    "action": {
+      "default_popup": "index.html",
+      "default_icon": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+      }
+    }
+  }
+  
